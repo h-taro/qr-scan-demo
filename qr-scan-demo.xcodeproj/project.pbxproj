@@ -51,9 +51,7 @@
 		768660782958A28800CBECFB /* qr-scan-demo */ = {
 			isa = PBXGroup;
 			children = (
-				768660792958A28800CBECFB /* qr_scan_demoApp.swift */,
-				7686607B2958A28800CBECFB /* ContentView.swift */,
-				7686607D2958A28C00CBECFB /* Assets.xcassets */,
+				768660872958A3EE00CBECFB /* Resources */,
 				7686607F2958A28C00CBECFB /* Preview Content */,
 			);
 			path = "qr-scan-demo";
@@ -65,6 +63,16 @@
 				768660802958A28C00CBECFB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		768660872958A3EE00CBECFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				768660792958A28800CBECFB /* qr_scan_demoApp.swift */,
+				7686607B2958A28800CBECFB /* ContentView.swift */,
+				7686607D2958A28C00CBECFB /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
