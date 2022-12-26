@@ -11,6 +11,12 @@
 		7686607C2958A28800CBECFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686607B2958A28800CBECFB /* ContentView.swift */; };
 		7686607E2958A28C00CBECFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7686607D2958A28C00CBECFB /* Assets.xcassets */; };
 		768660812958A28C00CBECFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768660802958A28C00CBECFB /* Preview Assets.xcassets */; };
+		7686608C2958A80A00CBECFB /* UICameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686608B2958A80A00CBECFB /* UICameraView.swift */; };
+		768660902958AA8700CBECFB /* UICameraViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686608F2958AA8700CBECFB /* UICameraViewDelegate.swift */; };
+		768660922958C72900CBECFB /* CameraViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768660912958C72900CBECFB /* CameraViewRepresentable.swift */; };
+		768660962959161500CBECFB /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768660952959161500CBECFB /* ScannerView.swift */; };
+		768660982959164700CBECFB /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768660972959164700CBECFB /* ScannerViewModel.swift */; };
+		7686609E29591B9800CBECFB /* THLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 7686609D29591B9800CBECFB /* THLogger */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		7686607B2958A28800CBECFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7686607D2958A28C00CBECFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		768660802958A28C00CBECFB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7686608B2958A80A00CBECFB /* UICameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICameraView.swift; sourceTree = "<group>"; };
+		7686608F2958AA8700CBECFB /* UICameraViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICameraViewDelegate.swift; sourceTree = "<group>"; };
+		768660912958C72900CBECFB /* CameraViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewRepresentable.swift; sourceTree = "<group>"; };
+		768660952959161500CBECFB /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		768660972959164700CBECFB /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7686609E29591B9800CBECFB /* THLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +63,8 @@
 		768660782958A28800CBECFB /* qr-scan-demo */ = {
 			isa = PBXGroup;
 			children = (
+				76866093295915FB00CBECFB /* Screens */,
+				768660882958A7E000CBECFB /* Components */,
 				768660872958A3EE00CBECFB /* Resources */,
 				7686607F2958A28C00CBECFB /* Preview Content */,
 			);
@@ -75,6 +89,41 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		768660882958A7E000CBECFB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				768660892958A7EC00CBECFB /* QR */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		768660892958A7EC00CBECFB /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				7686608B2958A80A00CBECFB /* UICameraView.swift */,
+				7686608F2958AA8700CBECFB /* UICameraViewDelegate.swift */,
+				768660912958C72900CBECFB /* CameraViewRepresentable.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		76866093295915FB00CBECFB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				768660942959160000CBECFB /* Scanner */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		768660942959160000CBECFB /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				768660952959161500CBECFB /* ScannerView.swift */,
+				768660972959164700CBECFB /* ScannerViewModel.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +140,9 @@
 			dependencies = (
 			);
 			name = "qr-scan-demo";
+			packageProductDependencies = (
+				7686609D29591B9800CBECFB /* THLogger */,
+			);
 			productName = "qr-scan-demo";
 			productReference = 768660762958A28800CBECFB /* qr-scan-demo.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 7686606D2958A28800CBECFB;
+			packageReferences = (
+				7686609C29591B9800CBECFB /* XCRemoteSwiftPackageReference "THLogger" */,
+			);
 			productRefGroup = 768660772958A28800CBECFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,8 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768660982959164700CBECFB /* ScannerViewModel.swift in Sources */,
 				7686607C2958A28800CBECFB /* ContentView.swift in Sources */,
 				7686607A2958A28800CBECFB /* qr_scan_demoApp.swift in Sources */,
+				768660902958AA8700CBECFB /* UICameraViewDelegate.swift in Sources */,
+				768660962959161500CBECFB /* ScannerView.swift in Sources */,
+				7686608C2958A80A00CBECFB /* UICameraView.swift in Sources */,
+				768660922958C72900CBECFB /* CameraViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +338,7 @@
 				DEVELOPMENT_TEAM = FP5AQZ56FT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,6 +371,7 @@
 				DEVELOPMENT_TEAM = FP5AQZ56FT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -353,6 +415,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7686609C29591B9800CBECFB /* XCRemoteSwiftPackageReference "THLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/h-taro/THLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7686609D29591B9800CBECFB /* THLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7686609C29591B9800CBECFB /* XCRemoteSwiftPackageReference "THLogger" */;
+			productName = THLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7686606E2958A28800CBECFB /* Project object */;
 }
