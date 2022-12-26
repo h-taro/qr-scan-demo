@@ -20,7 +20,7 @@ struct ScannerView: View {
             Text(viewModel.qrcode)
                 .font(.title)
                 .fontWeight(.bold)
-                .foregroundColor(.gray.opacity(0.6))
+                .foregroundColor(.blue.opacity(0.8))
                 .shadow(radius: 0.8)
         }
     }
